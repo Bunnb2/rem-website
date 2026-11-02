@@ -1,0 +1,291 @@
+:root {
+  --white: #fbfbfd;
+  --paper: #ffffff;
+  --ink: #14213d;
+  --muted: #4a5878;
+  --line: #dce3f0;
+  --blue: #1d4e89;
+  --blue-soft: #e8f0fa;
+  --orange: #e86a17;
+  --max: 920px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--white);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--orange);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1.25rem 1.75rem;
+  background: var(--white);
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--blue);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: var(--muted);
+}
+
+.hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 8rem 1.75rem 7rem;
+}
+
+.eyebrow {
+  margin: 0 0 1.25rem;
+  color: var(--orange);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(3.4rem, 10vw, 6.4rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+.lede {
+  max-width: 28rem;
+  margin: 2rem 0 0;
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: 2.5rem;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 4.5rem 1.75rem;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 4.5rem;
+}
+
+.section-label {
+  color: var(--blue);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.section-body p {
+  margin: 0 0 1.25rem;
+  max-width: 38rem;
+}
+
+.section-body p:last-child {
+  margin-bottom: 0;
+}
+
+.roles {
+  display: grid;
+  gap: 1.15rem;
+  margin: 3rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.roles li {
+  display: grid;
+  grid-template-columns: minmax(10rem, 14rem) 1fr;
+  gap: 1rem;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.roles li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.role-title {
+  color: var(--ink);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.role-org {
+  color: var(--muted);
+}
+
+.creds {
+  display: grid;
+  gap: 0.55rem;
+  margin: 3rem 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 38rem;
+  color: var(--muted);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.creds li {
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--orange);
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 1.25rem;
+  padding: 2.4rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.project:first-of-type {
+  padding-top: 0;
+}
+
+.project:last-of-type {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.project-index {
+  margin: 0.35rem 0 0;
+  color: var(--orange);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+}
+
+.project h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.55rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1.5rem 2.25rem;
+  margin-top: 1.5rem;
+}
+
+.contact .email {
+  color: var(--blue);
+  font-size: 1.65rem;
+  letter-spacing: -0.02em;
+  border-bottom: 1px solid var(--orange);
+}
+
+.contact .linkedin {
+  color: var(--muted);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact .email:hover,
+.contact .linkedin:hover {
+  color: var(--orange);
+}
+
+.site-footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 3rem 1.75rem 4rem;
+  color: var(--muted);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding-top: 5.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .section {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .roles li {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .contact .email {
+    font-size: 1.2rem;
+  }
+}
